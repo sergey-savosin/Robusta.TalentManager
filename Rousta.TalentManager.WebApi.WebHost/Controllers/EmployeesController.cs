@@ -37,6 +37,31 @@ namespace Rousta.TalentManager.WebApi.WebHost.Controllers
 
             return Request.CreateResponse<EmployeeDto>(HttpStatusCode.OK, mapper.Map<Employee, EmployeeDto>(employee));
         }
+
+        public HttpResponseMessage Post(EmployeeDto employeeDto)
+        {
+            var employee = mapper.Map<EmployeeDto, Employee>(employeeDto);
+
+            repository.Insert(employee);
+            uow.Save();
+
+            var response = Request.CreateResponse<Employee>(HttpStatusCode.Created, employee);
+
+            string uri = Url.Link("DefaultApi", new { id = employee.Id });
+            response.Headers.Location = new Uri(uri);
+            return response;
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (repository != null)
+                repository.Dispose();
+
+            if (uow != null)
+                uow.Dispose();
+                
+            base.Dispose(disposing);
+        }
     }
 
 }
