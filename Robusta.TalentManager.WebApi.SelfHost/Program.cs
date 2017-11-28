@@ -13,7 +13,9 @@ namespace Robusta.TalentManager.WebApi.SelfHost
     {
         static void Main(string[] args)
         {
-            var configuration = new HttpSelfHostConfiguration("http://localhost:8086");
+            //var configuration = new HttpSelfHostConfiguration("http://localhost:8086");
+            var configuration = new MySelfHostConfiguration("https://localhost:8086");
+
             DtoMapperConfig.CreateMaps();
             IocConfig.RegisterDependencyResolver(configuration);
             WebApiConfig.Register(configuration);
