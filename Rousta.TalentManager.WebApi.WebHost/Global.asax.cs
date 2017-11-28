@@ -7,7 +7,7 @@ using System.Web.Http;
 using System.Web.Security;
 using System.Web.SessionState;
 
-namespace Rousta.TalentManager.WebApi.WebHost
+namespace Robusta.TalentManager.WebApi.WebHost
 {
     public class Global : System.Web.HttpApplication
     {

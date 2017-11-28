@@ -7,12 +7,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace Rousta.TalentManager.WebApi.WebHost.Controllers
+namespace Robusta.TalentManager.WebApi.Core.Controllers
 {
-    public class EmployeesController: ApiController
+    public class EmployeesController : ApiController
     {
         private readonly IUnitOfWork uow = null;
         private readonly IRepository<Employee> repository = null;
@@ -59,9 +60,8 @@ namespace Rousta.TalentManager.WebApi.WebHost.Controllers
 
             if (uow != null)
                 uow.Dispose();
-                
+
             base.Dispose(disposing);
         }
     }
-
 }

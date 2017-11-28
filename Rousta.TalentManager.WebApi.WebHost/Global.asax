@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Rousta.TalentManager.WebApi.WebHost.Global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Robusta.TalentManager.WebApi.WebHost.Global" Language="C#" %>
