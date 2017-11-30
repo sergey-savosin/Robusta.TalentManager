@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robusta.TalentManager.Domain", "Robusta.TalentManager.Domain\Robusta.TalentManager.Domain.csproj", "{1751B7A5-643B-444C-8DDE-FFB24E93351E}"
 EndProject
@@ -14,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robusta.TalentManager.WebApi.WebHost", "Rousta.TalentManager.WebApi.WebHost\Robusta.TalentManager.WebApi.WebHost.csproj", "{58A24057-85BD-483B-AD06-61D9FA83BCDC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robusta.TalentManager.WebApi.SelfHost", "Robusta.TalentManager.WebApi.SelfHost\Robusta.TalentManager.WebApi.SelfHost.csproj", "{656F98B1-C1E5-4CE1-977A-42DCAA8B2F8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robusta.TalentManager.WebApi.Test", "Robusta.TalentManager.WebApi.Test\Robusta.TalentManager.WebApi.Test.csproj", "{BAC58383-184B-4EFF-A75E-19A430084822}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{656F98B1-C1E5-4CE1-977A-42DCAA8B2F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{656F98B1-C1E5-4CE1-977A-42DCAA8B2F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{656F98B1-C1E5-4CE1-977A-42DCAA8B2F8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAC58383-184B-4EFF-A75E-19A430084822}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAC58383-184B-4EFF-A75E-19A430084822}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAC58383-184B-4EFF-A75E-19A430084822}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAC58383-184B-4EFF-A75E-19A430084822}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

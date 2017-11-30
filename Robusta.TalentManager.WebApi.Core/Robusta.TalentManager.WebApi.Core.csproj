@@ -65,6 +65,7 @@
     <Compile Include="Configuration\IocConfig.cs" />
     <Compile Include="Configuration\WebApiConfig.cs" />
     <Compile Include="Controllers\EmployeesController.cs" />
+    <Compile Include="Handlers\AuthenticationHandler.cs" />
     <Compile Include="Infrastructure\StructureMapContainer.cs" />
     <Compile Include="Infrastructure\StructureMapDependencyScope.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

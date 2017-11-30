@@ -18,6 +18,12 @@ namespace Robusta.TalentManager.WebApi.Core.Configuration
                 cfg.CreateMap<EmployeeDto, Employee>();
                 cfg.CreateMap<Employee, EmployeeDto>();
             });
+            //var mapper = new MapperConfiguration(cfg =>
+            //{
+            //    cfg.CreateMap<EmployeeDto, Employee>();
+            //    cfg.CreateMap<Employee, EmployeeDto>();
+            //}).CreateMapper();
+
         }
     }
 }

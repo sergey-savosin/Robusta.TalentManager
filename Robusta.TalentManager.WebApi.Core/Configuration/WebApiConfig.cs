@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Robusta.TalentManager.WebApi.Core.Handlers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,8 @@ namespace Robusta.TalentManager.WebApi.Core.Configuration
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
                 );
+
+            config.MessageHandlers.Add(new AuthenticationHandler());
         }
     }
 }

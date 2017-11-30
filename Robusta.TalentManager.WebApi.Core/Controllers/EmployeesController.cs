@@ -26,17 +26,25 @@ namespace Robusta.TalentManager.WebApi.Core.Controllers
             this.mapper = mapper;
         }
 
+        [Authorize]
         public HttpResponseMessage Get(int id)
         {
-            var employee = repository.Find(id);
-            if (employee == null)
+            try
             {
-                var response = Request.CreateResponse(HttpStatusCode.NotFound, "Employee not found");
+                var employee = repository.Find(id);
+                if (employee == null)
+                {
+                    var response = Request.CreateResponse(HttpStatusCode.NotFound, "Employee not found");
 
-                throw new HttpResponseException(response);
+                    throw new HttpResponseException(response);
+                }
+                return Request.CreateResponse<EmployeeDto>(HttpStatusCode.OK, mapper.Map<Employee, EmployeeDto>(employee));
             }
-
-            return Request.CreateResponse<EmployeeDto>(HttpStatusCode.OK, mapper.Map<Employee, EmployeeDto>(employee));
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "error");
         }
 
         public HttpResponseMessage Post(EmployeeDto employeeDto)
